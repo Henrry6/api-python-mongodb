@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1 class="text-xl font-bold">USUARIOS</h1>
+    <div v-if="users.length > 0">
+      <table class="w-96 border-separate border m-4">
+        <thead>
+          <tr>
+            <th class="border text-left">Usuario</th>
+            <th class="border text-left">Email</th>
+          </tr>
+        </thead>
+        <tbody v-for="user of users">
+          <tr>
+            <td class="border">
+              {{ user.username }}
+          </td>
+          <td class="border">
+            {{ user.email }}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/app_vue.js"></script>
+</body>
+</html>
